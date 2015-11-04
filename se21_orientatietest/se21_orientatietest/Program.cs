@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace se21_orientatietest
+namespace Jelle_Grol
 {
     static class Program
     {
