@@ -55,7 +55,7 @@ namespace Jelle_Grol
                 {
                     case 0:
                         Sterkedrank sd = new Sterkedrank(Convert.ToInt16(nudNieuweVerkoopAantal.Value));
-                        adm.verkopen.Add(sd);
+                        adm.VoegToe(sd);
                         break;
                 }
             }

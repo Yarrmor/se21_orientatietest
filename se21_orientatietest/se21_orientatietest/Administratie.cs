@@ -24,7 +24,7 @@ namespace Jelle_Grol
 
         public void VoegToe(Verkoop verkoop)
         {
-
+            this.verkopen.Add(verkoop);
         }
     }
 }
