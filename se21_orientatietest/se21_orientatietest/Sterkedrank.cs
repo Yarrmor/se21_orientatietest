@@ -8,8 +8,8 @@ namespace Jelle_Grol
 {
     class Sterkedrank : Verkoop
     {
-        public new BTWTarief BTWTarief { get { return BTWTarief; } }
-        public new decimal Prijs { get { return Prijs; } }
+        public new BTWTarief BTWTarief { get { return BTWTarief; } set { BTWTarief = BTWTarief.Hoog; } }
+        public new decimal Prijs { get { return Prijs; } set { Prijs = 10.0M; } }
 
         public Sterkedrank(int aantal)
             :base(aantal)
@@ -19,7 +19,7 @@ namespace Jelle_Grol
 
         public override string ToString()
         {
-            return "Verkoop: Sterkedrank, aantal: " + this.Aantal;
+            return "Verkoop: Sterkedrank, aantal: " + this.Aantal + "+ om " + this.Tijdstip.ToString();
         }
     }
 }

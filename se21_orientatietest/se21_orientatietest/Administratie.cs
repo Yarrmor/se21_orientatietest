@@ -26,5 +26,39 @@ namespace Jelle_Grol
         {
             this.verkopen.Add(verkoop);
         }
+
+        public List<IInkomsten> Overzicht(DateTime van, DateTime tot)
+        {
+            List<IInkomsten> overzicht = new List<IInkomsten>();
+            List<IInkomsten> verhTemp = this.verhuringen.Cast<IInkomsten>().ToList();
+            List<IInkomsten> verkTemp = this.verkopen.Cast<IInkomsten>().ToList();
+            foreach(IInkomsten i in verkTemp)
+            {
+                verhTemp.Add(i);
+            }
+            var overzichtTemp = from v in verhTemp where (v.Tijdstip >= van && v.Tijdstip <= tot) orderby v.Tijdstip descending select v;
+            foreach(IInkomsten o in overzichtTemp)
+            {
+                overzicht.Add(o);
+            }
+            return overzicht;
+        }
+
+        public List<IInkomsten> Overzicht(BTWTarief tarief)
+        {
+            List<IInkomsten> overzicht = new List<IInkomsten>();
+            List<IInkomsten> verhTemp = this.verhuringen.Cast<IInkomsten>().ToList();
+            List<IInkomsten> verkTemp = this.verkopen.Cast<IInkomsten>().ToList();
+            foreach (IInkomsten i in verkTemp)
+            {
+                verhTemp.Add(i);
+            }
+            var overzichtTemp = from v in verhTemp where (v.BTWTarief == tarief) orderby v.Tijdstip descending select v;
+            foreach (IInkomsten o in overzichtTemp)
+            {
+                overzicht.Add(o);
+            }
+            return overzicht;
+        }
     }
 }

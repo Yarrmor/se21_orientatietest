@@ -9,9 +9,9 @@ namespace Jelle_Grol
     abstract class Verhuur : IInkomsten
     {
         public int UrenVerhuurd { get; set; }
-        public decimal Bedrag { get { return Bedrag; } }
+        public decimal Bedrag { get { return Bedrag; } set { Bedrag = this.PrijsPerUur * this.UrenVerhuurd; } }
         public DateTime Tijdstip { get; set; }
-        public BTWTarief BTWTarief { get { return BTWTarief; } }
+        public BTWTarief BTWTarief { get { return BTWTarief; } set { BTWTarief = BTWTarief.Ongespecificeerd; } }
         public decimal PrijsPerUur { get { return PrijsPerUur; } }
 
         public Verhuur(DateTime tijdstip, int urenVerhuurd)

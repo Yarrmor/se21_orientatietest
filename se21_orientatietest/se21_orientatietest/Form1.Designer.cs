@@ -296,6 +296,7 @@
             this.btnOverzichtDatumbereik.TabIndex = 11;
             this.btnOverzichtDatumbereik.Text = "Toon overzicht voor datumbereik";
             this.btnOverzichtDatumbereik.UseVisualStyleBackColor = true;
+            this.btnOverzichtDatumbereik.Click += new System.EventHandler(this.btnOverzichtDatumbereik_Click);
             // 
             // label7
             // 
@@ -318,6 +319,7 @@
             this.cbOverzichtBTW.Name = "cbOverzichtBTW";
             this.cbOverzichtBTW.Size = new System.Drawing.Size(125, 21);
             this.cbOverzichtBTW.TabIndex = 12;
+            this.cbOverzichtBTW.SelectedIndexChanged += new System.EventHandler(this.cbOverzichtBTW_SelectedIndexChanged);
             // 
             // label6
             // 

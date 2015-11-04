@@ -66,5 +66,52 @@ namespace Jelle_Grol
                 lbVerkopen.Items.Add(v.ToString());
             }
         }
+
+        private void btnOverzichtDatumbereik_Click(object sender, EventArgs e)
+        {
+            List<IInkomsten> overzicht = adm.Overzicht(dtpOverzichtVan.Value, dtpOverzichtTot.Value);
+            List<string> stringList = new List<string>();
+            decimal totaalPrijs = 0.0M;
+            foreach(IInkomsten i in overzicht)
+            {
+                stringList.Add(i.ToString());
+                //totaalPrijs = totaalPrijs + i.Bedrag;
+            }
+            stringList.Add("Totaalprijs: " + totaalPrijs.ToString());
+            //BRON: http://stackoverflow.com/questions/5163108/how-do-i-put-the-contents-of-a-list-in-a-single-messagebox
+            var message = string.Join(Environment.NewLine, stringList);
+            MessageBox.Show(message);
+        }
+
+        private void cbOverzichtBTW_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int type = cbOverzichtBTW.SelectedIndex;
+            List<IInkomsten> overzicht = new List<IInkomsten>();
+
+            switch(type)
+            {
+                case 0:
+                    overzicht = adm.Overzicht(BTWTarief.Ongespecificeerd);
+                    break;
+                case 1:
+                    overzicht = adm.Overzicht(BTWTarief.Hoog);
+                    break;
+                case 2:
+                    overzicht = adm.Overzicht(BTWTarief.Laag);
+                    break;
+            }
+
+            List<string> stringList = new List<string>();
+            decimal totaalPrijs = 0.0M;
+            foreach (IInkomsten i in overzicht)
+            {
+                stringList.Add(i.ToString());
+                //totaalPrijs = totaalPrijs + i.Bedrag;
+            }
+            stringList.Add("Totaalprijs: " + totaalPrijs.ToString());
+            //BRON: http://stackoverflow.com/questions/5163108/how-do-i-put-the-contents-of-a-list-in-a-single-messagebox
+            var message = string.Join(Environment.NewLine, stringList);
+            MessageBox.Show(message);
+        }
     }
 }
