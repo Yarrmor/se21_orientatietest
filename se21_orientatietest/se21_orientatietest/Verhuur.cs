@@ -10,18 +10,19 @@ namespace Jelle_Grol
     {
         public int UrenVerhuurd { get; set; }
         public decimal Bedrag { get { return Bedrag; } }
-        public DateTime Tijdstip { get { return Tijdstip; } }
+        public DateTime Tijdstip { get; set; }
         public BTWTarief BTWTarief { get { return BTWTarief; } }
         public decimal PrijsPerUur { get { return PrijsPerUur; } }
 
         public Verhuur(DateTime tijdstip, int urenVerhuurd)
         {
-
+            this.Tijdstip = tijdstip;
+            this.UrenVerhuurd = urenVerhuurd;
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Verhuring: Feestzaal " + this.Tijdstip + " voor " + this.UrenVerhuurd + " uur.";
         }
     }
 }

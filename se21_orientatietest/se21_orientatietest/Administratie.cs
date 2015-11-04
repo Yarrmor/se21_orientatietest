@@ -19,7 +19,7 @@ namespace Jelle_Grol
 
         public void VoegToe(Verhuur verhuur)
         {
-
+            this.verhuringen.Add(verhuur);
         }
 
         public void VoegToe(Verkoop verkoop)

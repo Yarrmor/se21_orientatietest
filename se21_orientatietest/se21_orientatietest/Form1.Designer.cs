@@ -107,6 +107,7 @@
             this.btnNieuweVerhuringToevoegen.TabIndex = 3;
             this.btnNieuweVerhuringToevoegen.Text = "Toevoegen";
             this.btnNieuweVerhuringToevoegen.UseVisualStyleBackColor = true;
+            this.btnNieuweVerhuringToevoegen.Click += new System.EventHandler(this.btnNieuweVerhuringToevoegen_Click);
             // 
             // label1
             // 
@@ -217,6 +218,7 @@
             this.btnNieuweVerkoopToevoegen.TabIndex = 7;
             this.btnNieuweVerkoopToevoegen.Text = "Toevoegen";
             this.btnNieuweVerkoopToevoegen.UseVisualStyleBackColor = true;
+            this.btnNieuweVerkoopToevoegen.Click += new System.EventHandler(this.btnNieuweVerkoopToevoegen_Click);
             // 
             // label4
             // 

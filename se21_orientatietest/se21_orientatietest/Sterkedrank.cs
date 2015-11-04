@@ -19,7 +19,7 @@ namespace Jelle_Grol
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Verkoop: Sterkedrank, aantal: " + this.Aantal;
         }
     }
 }

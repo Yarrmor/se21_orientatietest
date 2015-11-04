@@ -16,7 +16,7 @@ namespace Jelle_Grol
         
         public Verkoop(int aantal)
         {
-
+            this.Aantal = aantal;
         }
 
         public override string ToString()
