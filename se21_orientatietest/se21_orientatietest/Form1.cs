@@ -113,5 +113,30 @@ namespace Jelle_Grol
             var message = string.Join(Environment.NewLine, stringList);
             MessageBox.Show(message);
         }
+
+        private void btnOverzichtExporteer_Click(object sender, EventArgs e)
+        {
+            int type = cbOverzichtBTW.SelectedIndex;
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            DialogResult result = fbd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string path = fbd.SelectedPath;
+
+                switch (type)
+                {
+                    case 0:
+                        adm.Exporteer(path, BTWTarief.Ongespecificeerd);
+                        break;
+                    case 1:
+                        adm.Exporteer(path, BTWTarief.Laag);
+                        break;
+                    case 2:
+                        adm.Exporteer(path, BTWTarief.Hoog);
+                        break;
+                }
+            }
+        }
     }
 }
