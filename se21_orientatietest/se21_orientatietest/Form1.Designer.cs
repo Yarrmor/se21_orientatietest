@@ -1,4 +1,4 @@
-﻿namespace se21_orientatietest
+﻿namespace Jelle_Grol
 {
     partial class Form1
     {

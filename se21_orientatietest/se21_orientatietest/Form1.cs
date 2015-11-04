@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace se21_orientatietest
+namespace Jelle_Grol
 {
     public partial class Form1 : Form
     {
