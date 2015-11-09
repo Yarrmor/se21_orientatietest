@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Jelle_Grol
 {
-    abstract class Verhuur : IInkomsten
+    public abstract class Verhuur : IInkomsten
     {
         public int UrenVerhuurd { get; set; }
         public decimal Bedrag { get { return Bedrag; } set { Bedrag = this.PrijsPerUur * this.UrenVerhuurd; } }
         public DateTime Tijdstip { get; set; }
-        public BTWTarief BTWTarief { get { return BTWTarief; } set { BTWTarief = BTWTarief.Ongespecificeerd; } }
+        public BTWTarief BTWTarief { get { return BTWTarief.Ongespecificeerd; } set { /* do nothing, really */ } }
         public decimal PrijsPerUur { get { return PrijsPerUur; } }
 
         public Verhuur(DateTime tijdstip, int urenVerhuurd)

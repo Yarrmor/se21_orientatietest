@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jelle_Grol
 {
-    enum BTWTarief
+    public enum BTWTarief
     {
         Ongespecificeerd,
         Laag,

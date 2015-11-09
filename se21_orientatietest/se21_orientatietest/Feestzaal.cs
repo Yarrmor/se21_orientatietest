@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jelle_Grol
 {
-    class Feestzaal : Verhuur
+    public class Feestzaal : Verhuur
     {
         public new BTWTarief BTWTarief { get { return BTWTarief; } set { BTWTarief = BTWTarief.Hoog; } }
         public new decimal PrijsPerUur { get { return PrijsPerUur; } set { PrijsPerUur = 10.0M; } }

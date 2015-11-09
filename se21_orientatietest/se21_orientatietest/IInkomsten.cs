@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jelle_Grol
 {
-    interface IInkomsten
+    public interface IInkomsten
     {
         decimal Bedrag { get; }
         BTWTarief BTWTarief { get; }
